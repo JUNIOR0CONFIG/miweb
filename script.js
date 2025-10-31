@@ -1,9 +1,8 @@
-// --- Mini juego de clic rápido ---
+// 🎮 Mini juego: clic rápido al cuadrado brillante
 const square = document.getElementById("square");
 const scoreDisplay = document.getElementById("score");
 let score = 0;
 
-// Mueve el cuadrado a una posición aleatoria dentro del área
 function moveSquare() {
   const area = document.getElementById("game-area");
   const maxX = area.clientWidth - square.clientWidth;
@@ -18,8 +17,13 @@ square.addEventListener("click", () => {
   score++;
   scoreDisplay.textContent = score;
   moveSquare();
+
+  // Efecto visual al hacer clic
+  square.style.boxShadow = "0 0 35px #ff00ff, 0 0 60px #00ffff";
+  setTimeout(() => {
+    square.style.boxShadow = "0 0 25px #00ffff";
+  }, 150);
 });
 
-// Inicia el juego moviendo el cuadrado cada 2 segundos
-setInterval(moveSquare, 2000);
+setInterval(moveSquare, 1500);
 moveSquare();

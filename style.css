@@ -1,83 +1,134 @@
+/* ----- Estilo general ----- */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #1e1e2f, #2e2e42);
-  color: white;
-  min-height: 100vh;
+  background: radial-gradient(circle at top left, #180030, #060014);
+  color: #fff;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
+/* ----- Encabezado ----- */
 header {
   text-align: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  font-size: 2rem;
-  letter-spacing: 2px;
+  background: linear-gradient(90deg, #5b00ff, #7f00ff, #9c00ff);
+  box-shadow: 0 0 25px #5b00ff;
 }
 
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px #b76dff;
+}
+
+/* ----- Sección Biografía ----- */
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .bio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
-.bio .text {
-  flex: 1;
-  min-width: 300px;
+.text {
+  max-width: 500px;
+  background: rgba(90, 0, 255, 0.15);
+  border: 1px solid rgba(160, 100, 255, 0.4);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px rgba(120, 0, 255, 0.4);
+  transition: 0.3s ease;
+}
+
+.text:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(180, 0, 255, 0.8);
+}
+
+.text h2 {
+  color: #cba6ff;
+  text-shadow: 0 0 10px #a855ff;
+  margin-bottom: 1rem;
+}
+
+.video iframe {
+  width: 420px;
+  height: 236px;
+  border-radius: 15px;
+  border: 2px solid #7f00ff;
+  box-shadow: 0 0 25px rgba(100, 0, 255, 0.8);
+  transition: 0.4s ease;
+}
+
+.video iframe:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(150, 0, 255, 1);
+}
+
+/* ----- Mini Juego ----- */
+.game {
+  text-align: center;
+  background: rgba(50, 0, 90, 0.4);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid rgba(150, 0, 255, 0.5);
+  box-shadow: 0 0 20px rgba(150, 0, 255, 0.5);
+  width: 90%;
   max-width: 600px;
 }
 
-.bio .video iframe {
-  width: 400px;
-  height: 225px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
-}
-
-.game {
-  text-align: center;
-  margin-top: 4rem;
-}
-
 #game-area {
-  width: 300px;
-  height: 300px;
-  background: rgba(255, 255, 255, 0.1);
+  width: 320px;
+  height: 320px;
+  background: rgba(255, 255, 255, 0.05);
   margin: 2rem auto;
   position: relative;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(120, 0, 255, 0.6);
   overflow: hidden;
 }
 
 #square {
-  width: 40px;
-  height: 40px;
-  background-color: #00ff6a;
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #00e5ff, #9d00ff);
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 8px;
+  border-radius: 50%;
   cursor: pointer;
+  box-shadow: 0 0 25px #00ffff;
   transition: 0.1s ease;
 }
 
+.score-text {
+  font-size: 1.2rem;
+  color: #b19eff;
+  text-shadow: 0 0 10px #6b00ff;
+}
+
+/* ----- Footer ----- */
 footer {
   text-align: center;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.05);
   font-size: 0.9rem;
+  border-top: 1px solid rgba(150, 0, 255, 0.4);
+  box-shadow: 0 -2px 15px rgba(150, 0, 255, 0.3);
 }
