@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Junior</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  body {
+    background: radial-gradient(circle at top left, #3b0a91, #1e003e 70%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  header {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #3f00ff, #8e2de2);
+    box-shadow: 0 0 20px #8e2de2;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 15px #b26dff;
+  }
+
+  .container {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    padding: 1rem;
+  }
+
+  .bio {
+    flex: 1 1 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(100, 0, 255, 0.3);
+    transition: transform 0.3s ease;
+  }
+
+  .bio:hover {
+    transform: translateY(-5px);
+  }
+
+  .bio h2 {
+    font-size: 2rem;
+    color: #c792ff;
+  }
+
+  .bio p {
+    margin-top: 1rem;
+    line-height: 1.7;
+  }
+
+  .video {
+    flex: 1 1 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.5);
+  }
+
+  iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
+
+  /* --- JUEGO --- */
+  #game {
+    margin-top: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 25px rgba(150, 0, 255, 0.6);
+  }
+
+  #clickButton {
+    margin-top: 1rem;
+    background: linear-gradient(90deg, #3f00ff, #8e2de2);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px #8e2de2;
+  }
+
+  #clickButton:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #c084ff;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 1rem;
+    color: #bbb;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Junior</h1>
+</header>
+
+<section class="container">
+  <div class="bio">
+    <h2>Sobre mí</h2>
+    <p>
+      ¡Hola! Soy Junior, un apasionado por la tecnología, el gaming y la creatividad.
+      Me encanta aprender cosas nuevas, crear proyectos locos y ayudar a otros a hacer lo mismo.
+      En esta página podrás conocerme un poco más y ver algunos de mis contenidos.
+    </p>
+  </div>
+
+  <div class="video">
+    <!-- Coloca aquí tu enlace de video de YouTube -->
+    <iframe src="https://www.youtube.com/embed/TU_ENLACE_AQUI" allowfullscreen></iframe>
+  </div>
+</section>
+
+<section id="game">
+  <h2>🎮 Mini Juego: ¡Haz clic rápido!</h2>
+  <p>Presiona el botón lo más rápido que puedas antes de que se acabe el tiempo.</p>
+  <button id="clickButton">¡Haz clic!</button>
+  <p id="score">Puntuación: 0</p>
+  <p id="timer">Tiempo restante: 10s</p>
+</section>
+
+<footer>
+  © 2025 Junior - Todos los derechos reservados
+</footer>
+
+<script>
+  // --- Mini juego de clics ---
+  let score = 0;
+  let timeLeft = 10;
+  const button = document.getElementById("clickButton");
+  const scoreText = document.getElementById("score");
+  const timerText = document.getElementById("timer");
+
+  button.addEventListener("click", () => {
+    if (timeLeft > 0) {
+      score++;
+      scoreText.textContent = "Puntuación: " + score;
+    }
+  });
+
+  const countdown = setInterval(() => {
+    if (timeLeft > 0) {
+      timeLeft--;
+      timerText.textContent = "Tiempo restante: " + timeLeft + "s";
+    } else {
+      clearInterval(countdown);
+      button.disabled = true;
+      button.textContent = "¡Fin del juego!";
+      timerText.textContent = "Tu puntuación final: " + score;
+    }
+  }, 1000);
+</script>
+
+</body>
+</html>
