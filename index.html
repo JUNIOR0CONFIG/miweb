@@ -1,83 +1,52 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Junior</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Junior - Biografía</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">Junior</h1>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#sobre-mi">Sobre Mí</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <h1>Junior</h1>
+  </header>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h2>¡Hola, soy Junior!</h2>
-                <p>Bienvenido a mi página personal</p>
-                <button id="saludoBtn" class="btn">¡Salúdame!</button>
-            </div>
-        </section>
+  <main>
+    <section class="bio">
+      <div class="text">
+        <h2>Sobre mí</h2>
+        <p>
+          ¡Hola! Soy <strong>Junior</strong>, un apasionado de la tecnología, el desarrollo web y los videojuegos. 
+          Me encanta aprender cosas nuevas, experimentar con proyectos de código y compartir lo que sé con la comunidad.
+          En este espacio podrás conocer más sobre mí y disfrutar de algunos proyectos divertidos.
+        </p>
+      </div>
 
-        <section id="sobre-mi" class="about">
-            <div class="container">
-                <h2>Sobre Mí</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>Hola, me llamo Junior y esta es mi página web personal. Me encanta aprender sobre desarrollo web y tecnología.</p>
-                        <p>Estoy creando esta página para practicar mis habilidades en HTML, CSS y JavaScript.</p>
-                    </div>
-                    <div class="skills">
-                        <h3>Mis Intereses</h3>
-                        <ul>
-                            <li>Desarrollo Web</li>
-                            <li>Tecnología</li>
-                            <li>Programación</li>
-                            <li>Diseño</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <div class="video">
+        <!-- 🟩 Cambia el enlace de YouTube aquí -->
+        <iframe
+          src="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
+          title="Video de presentación"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
 
-        <section id="contacto" class="contact">
-            <div class="container">
-                <h2>Contacto</h2>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nombre:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-    </main>
+    <section class="game">
+      <h2>🎮 Mini Juego</h2>
+      <p>Haz clic en el cuadrado verde lo más rápido que puedas. ¡A ver cuántos puntos logras!</p>
+      <div id="game-area">
+        <div id="square"></div>
+      </div>
+      <p>Puntuación: <span id="score">0</span></p>
+    </section>
+  </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Junior. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+  <footer>
+    <p>© 2025 Junior. Todos los derechos reservados.</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
