@@ -1,52 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Junior</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junior - Portafolio Personal</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>Junior</h1>
-  </header>
+    <!-- Header y Navegación -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h2>Junior</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <main>
-    <section class="bio">
-      <div class="text">
-        <h2>✨ Sobre mí</h2>
-        <p>
-          ¡Hola! Soy <strong>Junior</strong>, amante de la tecnología, el desarrollo web y los videojuegos. 
-          Me encanta crear cosas nuevas, aprender cada día y compartir lo que hago con el mundo. 
-          Este espacio es una pequeña muestra de quién soy y lo que disfruto.
-        </p>
-      </div>
-
-      <div class="video">
-        <!-- 🔹 Coloca tu enlace de YouTube aquí -->
-        <iframe
-          src="https://www.youtube.com/watch?v=xvFZjo5PgG0&list=RDxvFZjo5PgG0&start_radio=1"
-          title="Video de presentación"
-          frameborder="0"
-          allowfullscreen
-        ></iframe>
-      </div>
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy <span class="highlight">Junior</span></h1>
+            <p>Desarrollador Web & Creativo Digital</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+                <a href="#contacto" class="btn btn-secondary">Contactar</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-placeholder">
+                <!-- Aquí puedes agregar tu foto -->
+                <span>Tu Foto Aquí</span>
+            </div>
+        </div>
     </section>
 
-    <section class="game">
-      <h2>🎮 Mini Juego</h2>
-      <p>Haz clic en el cuadrado brillante lo más rápido posible. ¡Demuestra tus reflejos!</p>
-      <div id="game-area">
-        <div id="square"></div>
-      </div>
-      <p class="score-text">Puntuación: <span id="score">0</span></p>
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Soy un apasionado desarrollador web con experiencia en crear soluciones digitales innovadoras. Me encanta aprender nuevas tecnologías y enfrentar desafíos creativos.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <strong>Nombre:</strong>
+                            <span>Junior</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email:</strong>
+                            <span>junior@email.com</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Ubicación:</strong>
+                            <span>Tu Ciudad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Junior. Todos los derechos reservados.</p>
-  </footer>
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <div class="container">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Proyecto 1</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Web 1</h3>
+                        <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <a href="#" class="project-link">Ver Proyecto</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Proyecto 2</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Web 2</h3>
+                        <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <a href="#" class="project-link">Ver Proyecto</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="image-placeholder">Proyecto 3</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Proyecto Web 3</h3>
+                        <p>Descripción breve del proyecto y las tecnologías utilizadas.</p>
+                        <div class="project-tech">
+                            <span>Vue.js</span>
+                            <span>Firebase</span>
+                            <span>SASS</span>
+                        </div>
+                        <a href="#" class="project-link">Ver Proyecto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Node.js</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">MySQL</span>
+                        <span class="skill-item">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Herramientas</h3>
+                    <div class="skill-list">
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Figma</span>
+                        <span class="skill-item">VS Code</span>
+                        <span class="skill-item">Photoshop</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¡Hablemos!</h3>
+                    <p>¿Tienes un proyecto en mente? Me encantaría escucharte.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email:</strong>
+                            <span>junior@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Teléfono:</strong>
+                            <span>+1 234 567 890</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Email" required>
+                    <textarea placeholder="Tu Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Junior. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
