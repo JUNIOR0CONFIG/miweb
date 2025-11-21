@@ -514,26 +514,6 @@ footer {
 .project-card:hover .project-image::after {
     opacity: 1;
 }
-.project-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.project-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    transition: var(--transition);
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--primary-color);
-    border-radius: 5px;
-}
-
-.project-link:hover {
-    background: var(--primary-color);
-    color: var(--white);
-}
 .profile-image {
     width: 300px;
     height: 300px;
